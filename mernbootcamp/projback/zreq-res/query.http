@@ -1,0 +1,161 @@
+# Auth requests
+# signup request
+POST http://localhost:8000/api/signup HTTP/1.1
+User-Agent: rest-client
+Accept-Language: en-GB,en-US;q=0.8,en;q=0.6,zh-CN;q=0.4
+Content-Type: application/json
+
+{
+    "name": "surendra",
+    "lastname": "pandey",
+    "email": "surendra@gmail.com",
+    "password": "surendra"
+}
+
+# signin request
+###
+POST http://localhost:8000/api/signin HTTP/1.1
+User-Agent: rest-client
+Accept-Language: en-GB,en-US;q=0.8,en;q=0.6,zh-CN;q=0.4
+Content-Type: application/json
+
+{
+    "email": "vishal@gmail.com",
+    "password": "vishal007"
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# user related requests
+# the Bearer related
+###
+POST http://localhost:8000/api/test HTTP/1.1
+User-Agent: rest-client
+Accept-Language: en-GB,en-US;q=0.8,en;q=0.6,zh-CN;q=0.4
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZmFhMzJlOWZjODQ5MzQwZDQwZWQ2MzUiLCJpYXQiOjE2MDUwNzkwMTV9.F9X1QyliAD0f4MA-N0qrBAc3cx6n9mwVWGuRzLpcL1c
+
+
+# the signout route request
+###
+GET http://localhost:8000/api/signout HTTP/1.1
+User-Agent: rest-client
+Accept-Language: en-GB,en-US;q=0.8,en;q=0.6,zh-CN;q=0.4
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZmFhMzJlOWZjODQ5MzQwZDQwZWQ2MzUiLCJpYXQiOjE2MDUwNzkwMTV9.F9X1QyliAD0f4MA-N0qrBAc3cx6n9mwVWGuRzLpcL1c
+
+# GET user
+###
+GET http://localhost:8000/api/user/5faa32e9fc849340d40ed635 HTTP/1.1
+User-Agent: rest-client
+Accept-Language: en-GB,en-US;q=0.8,en;q=0.6,zh-CN;q=0.4
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZmFhMzJlOWZjODQ5MzQwZDQwZWQ2MzUiLCJpYXQiOjE2MDUxNDE2MzV9.mOBOnrZC9db1DX4hJoYk3BV1j8CH_0Fv5m_XyEaczUQ
+
+# PUT update user
+###
+PUT http://localhost:8000/api/user/5faa32e9fc849340d40ed635 HTTP/1.1
+User-Agent: rest-client
+Accept-Language: en-GB,en-US;q=0.8,en;q=0.6,zh-CN;q=0.4
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZmFhMzJlOWZjODQ5MzQwZDQwZWQ2MzUiLCJpYXQiOjE2MDUwNzkwMTV9.F9X1QyliAD0f4MA-N0qrBAc3cx6n9mwVWGuRzLpcL1c
+
+{
+    "password": "vishal"
+}
+
+# GET purchase list of user
+###
+GET http://localhost:8000/api/orders/user/5faa32e9fc849340d40ed635 HTTP/1.1
+User-Agent: rest-client
+Accept-Language: en-GB,en-US;q=0.8,en;q=0.6,zh-CN;q=0.4
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZmFhMzJlOWZjODQ5MzQwZDQwZWQ2MzUiLCJpYXQiOjE2MDUwNzkwMTV9.F9X1QyliAD0f4MA-N0qrBAc3cx6n9mwVWGuRzLpcL1c
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# category related requests
+# creating the category
+###
+POST http://localhost:8000/api/category/create/5fb0c5d306d33629f405bfef HTTP/1.1
+User-Agent: rest-client
+Accept-Language: en-GB,en-US;q=0.8,en;q=0.6,zh-CN;q=0.4
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZmIwYzVkMzA2ZDMzNjI5ZjQwNWJmZWYiLCJpYXQiOjE2MDU0MjA2Mzh9.V0jfKGfAIbgl5Ms1zOPouTSfEzrRbC1hG5ARmYQpyfU
+
+{
+    "name": "winter"
+}
+
+# updating the category
+###
+PUT http://localhost:8000/api/category/5fb0c7ad06d33629f405bff0/5fb0c5d306d33629f405bfef HTTP/1.1
+User-Agent: rest-client
+Accept-Language: en-GB,en-US;q=0.8,en;q=0.6,zh-CN;q=0.4
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZmIwYzVkMzA2ZDMzNjI5ZjQwNWJmZWYiLCJpYXQiOjE2MDU0MjA2Mzh9.V0jfKGfAIbgl5Ms1zOPouTSfEzrRbC1hG5ARmYQpyfU
+
+{
+    "name": "summer"
+}
+
+# deleting the category
+###
+DELETE http://localhost:8000/api/category/5fb0cb677228820b3c261538/5fb0c5d306d33629f405bfef HTTP/1.1
+User-Agent: rest-client
+Accept-Language: en-GB,en-US;q=0.8,en;q=0.6,zh-CN;q=0.4
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZmIwYzVkMzA2ZDMzNjI5ZjQwNWJmZWYiLCJpYXQiOjE2MDU0MjA2Mzh9.V0jfKGfAIbgl5Ms1zOPouTSfEzrRbC1hG5ARmYQpyfU
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# routes related to product
+###
+POST http://localhost:8000/api/product/create/5fb0c5d306d33629f405bfef HTTP/1.1
+User-Agent: rest-client
+Accept-Language: en-GB,en-US;q=0.8,en;q=0.6,zh-CN;q=0.4
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZmIwYzVkMzA2ZDMzNjI5ZjQwNWJmZWYiLCJpYXQiOjE2MDU0MjA2Mzh9.V0jfKGfAIbgl5Ms1zOPouTSfEzrRbC1hG5ARmYQpyfU
+
+{
+    "name": "I write code-Ts",
+    "description": "A classic tshirt",
+    "price": 10,
+    "stock": 28,
+    "category": "5fb0c7ad06d33629f405bff0"
+}

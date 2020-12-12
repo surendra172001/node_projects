@@ -1,0 +1,9 @@
+{
+  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZmIwYzVkMzA2ZDMzNjI5ZjQwNWJmZWYiLCJpYXQiOjE2MDU0MjE3MjJ9.7SS-EAxhYMvFaYxzX3PK909BSjvKRkqHVgfzs3ljq7w",
+  "user": {
+    "_id": "5fb0c5d306d33629f405bfef",
+    "name": "surendra",
+    "email": "surendra@gmail.com",
+    "role": 1
+  }
+}

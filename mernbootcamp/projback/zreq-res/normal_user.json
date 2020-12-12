@@ -1,0 +1,9 @@
+{
+  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZmFhMzJlOWZjODQ5MzQwZDQwZWQ2MzUiLCJpYXQiOjE2MDU0MjIyMjF9.XCCSPj44qt9d5sdnGBfnG1N_rlj0s0LbQV4_isPR4Go",
+  "user": {
+    "_id": "5faa32e9fc849340d40ed635",
+    "name": "vishal01",
+    "email": "vishal@gmail.com",
+    "role": 0
+  }
+}
