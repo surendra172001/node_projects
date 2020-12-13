@@ -14,8 +14,7 @@ const stripe = require("stripe")(process.env.STRIPE_SECRET_KEY);
 const transporter = nodemailer.createTransport(
   sendgridtransport({
     auth: {
-      api_key:
-        "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",
+      api_key: process.env.SEND_GRID_KEY,
     },
   })
 );
